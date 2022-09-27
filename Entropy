@@ -1,0 +1,88 @@
+Project description:
+This code will calculate entropy given values in
+Celsius.
+
+Date
+Sept 24th, 2021.
+
+Class
+CS117
+
+Author
+Alexandra Friel
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+    double userInput;
+
+    //These values will range from 150-200
+    const double xInitial = 150.00;
+    const double yInitial = 7.2810;
+
+    //These values will range from 200-250
+    const double xRange1 = 200;
+    const double yRange1 = 7.5081;
+
+    //These values will range from 250-300
+    const double xRange2 = 250;
+    const double yRange2 = 7.7100;
+
+    //These values will range from 300-400
+    const double xRange3 = 300.00;
+    const double yRange3 = 7.8941;
+
+    //These values will range from 400-500
+    const double xRange4 = 400;
+    const double yRange4 = 8.2236;
+
+    const double xRange5 = 500;
+    const double yRange5 = 8.5153;
+
+    cout << fixed << setprecision(4);
+    cout << "Enter a temperature within 150-500 degrees celsius: ";
+
+    cin >> userInput;
+
+    if (userInput >= 150 && userInput < 200) {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout << endl << endl << "Your entropy value is " << userInput << " kJ/(kg.K)" << endl << endl;
+    }
+
+    else if (userInput >= 200 && userInput < 250) {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout << endl << endl << "Your entropy value is " << userInput  << " kJ/(kg.K)" << endl << endl;
+    }
+
+    else if (userInput >= 250 && userInput < 300) {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout << endl << endl << "Your entropy value is " << userInput << " kJ/(kg.K)" << endl << endl;
+    }
+
+    else if (userInput >= 300 && userInput < 400) {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout << endl << endl << "Your entropy value is " << userInput << " kJ/(kg.K)" << endl << endl;
+    }
+
+    else if (userInput >= 400 && userInput < 500) {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout << endl << endl << "Your entropy value is " << userInput << " kJ/(kg.K)" << endl << endl;
+    }
+
+    else if (userInput = 500) {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout <<  "\nYour entropy value is 8.5153 kJ/(kg.K)" << endl << endl;
+
+    }
+    else {
+        userInput = yInitial + (yRange1 - yInitial) * ((userInput - xInitial) / (xRange1 - xInitial));
+        cout << "TEMP OUT OF RANGE" << endl << endl;
+    }
+
+}
+
+return 0;
