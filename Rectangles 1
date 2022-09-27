@@ -1,0 +1,93 @@
+Project description:
+The objective of this program is to output the length, width, perimeter, and area of three rectangles and one square.
+
+Date:
+September 8th, 2021.
+
+Class:
+CS 117 section 002.
+
+Notes and Assumptions:
+ The process of repeating code felt ongoing, but it was not difficult to keep creating rectangles. Writing the code
+ multiple times helped me gain a better fundamental understanding of how C++ works and it was great practice. This
+ process works, but there are many ways to accomplish the same result. I would consider using rectangle classes or loops
+ because it would repeat the code and would allow access to shortcuts throughout programming. In this instance, I could
+ have also reused the same variable or an array. A square is also a rectangle, so I wonder if it would make it simpler
+ if there was one code for both because it is smart to avoid repeating code.
+
+Author:
+Alexandra Friel.
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double Length1, Width1, Perimeter1, Area1;
+    cout << "\nEnter the length of the 1st rectangle: ";
+    cin >> Length1;
+    cout << "Enter the width of the 1st rectangle: ";
+    cin >> Width1;
+
+    Perimeter1 = 2 * Length1 + 2 * Width1;
+    Area1 = Length1 * Width1;
+
+    cout << "You entered a rectangle with the following characteristics: " << endl << endl;
+
+    cout << "\tWidth  = " << Width1 << endl;
+    cout << "\tLength = " << Length1 << endl;
+    cout << "\tPerimeter = " << Perimeter1 << endl;
+    cout << "\tArea = " << Area1 << endl;
+
+    double Length2, Width2, Perimeter2, Area2;
+    cout << "\nEnter the length of the 2nd rectangle: ";
+    cin >> Length2;
+    cout << "Enter the width of the 2nd rectangle: ";
+    cin >> Width2;
+
+    Perimeter2 = 2 * Length2 + 2 * Width2;
+    Area2 = Length2 * Width2;
+
+    cout << "You entered a rectangle with the following characteristics: " << endl << endl;
+
+    cout << "\tWidth = " << Width2 << endl;
+    cout << "\tLength = " << Length2 << endl;
+    cout << "\tPerimeter = " << Perimeter2 << endl;
+    cout << "\tArea = " << Area2 << endl;
+
+    double Length3, Width3, Perimeter3, Area3;
+    cout << fixed << setprecision(4);
+    cout << "\nEnter the length of the 3rd rectangle: ";
+    cin >> Length3;
+    cout << "Enter the width of the 3rd rectangle: ";
+    cin >> Width3;
+
+    Perimeter3 = 2 * Length3 + 2 * Width3;
+    Area3 = Length3 * Width3;
+
+    cout << "You entered a rectangle with the following characteristics: " << endl << endl;
+
+    cout << "\tWidth = " << Width3 << endl;
+    cout << "\tLength = " << Length3 << endl;
+    cout << "\tPerimeter = " << Perimeter3 << endl;
+    cout << "\tArea = " << Area3 << endl;
+
+
+
+    cout << "\nEnter the side length of the square: ";
+    cin >> Length2;
+    cout << "You created the square with the following characteristics:";
+    cout << endl << endl;
+
+    Area2 = Length2 * Length2;
+    Perimeter2 = 4 * (Length2);
+
+    cout << "\tside length = " << Length2 << endl;
+    cout << "\tperimeter = " << Perimeter2  << endl;
+    cout << "\tarea = " << Area2  << endl;
+    cout << endl << endl;
+
+    return 0;
+}
