@@ -1,0 +1,73 @@
+//	Project name: Quadratic equation solver
+
+//Project description: This program will take values out of an input file (quadratic.dat) and compute the roots of the
+//quadratic function.It will also detect non real roots. The output is pasted into the console as well
+// as an output file (quadratic.txt)The default constructor and mutators will be tested.
+
+//Date: Nov. 19th 2021
+
+//Class: CS117
+
+//	Author: Alexandra Friel
+
+#include "QuadraticEquation.h"
+#include <cmath>
+QuadraticEquation::QuadraticEquation(double a, double b, double c) {
+    this->a = a;
+    this->b = b;
+    this->c = c;
+}
+QuadraticEquation::QuadraticEquation() {
+    this->a = 0;
+    this->b = 0;
+    this->c = 0;
+}
+
+void QuadraticEquation::setA(double a){
+    this->a = a;
+}
+void QuadraticEquation::setB(double b) {
+    this->b = b;
+}
+void QuadraticEquation::setC(double c) {
+    this->c = c;
+}
+
+double QuadraticEquation::getSolution1() {
+    double solution = 0;
+    double determinant =  pow(b,2)-(4*a*c);
+    solution = ((b*-1) - sqrt(determinant))/(2*a);
+    return solution;
+}
+double QuadraticEquation::getSolution2() {
+    double solution = 0;
+    double determinant =  pow(b,2)-(4*a*c);
+    solution = ((b*-1) + sqrt(determinant))/(2*a);
+    return solution;
+}
+
+
+bool QuadraticEquation::hasSolutions() {
+    double determinant = 0;
+
+    determinant = (b*b)-(4*a*c);
+
+    if(determinant >= 0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+double QuadraticEquation::getA(){
+    return this->a;
+}
+
+double QuadraticEquation::getB() {
+    return this->b;
+}
+
+double QuadraticEquation::getC() {
+    return this->c;
+}
