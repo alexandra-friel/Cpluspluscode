@@ -1,0 +1,90 @@
+Project description: Create 3 rectangles using user defined functions.
+
+
+Author:
+Alexandra Friel
+ */
+
+
+#include <iostream>
+#include <iomanip> //using <iomanip> for the set precision feature.
+
+using namespace std;
+
+double perimeterRectangles(double width, double length){
+
+    double perimeter = 2 * (width + length); // formula for perimeter.
+    return perimeter;
+}
+
+double areaRectangles(double width, double length){
+
+    double area = width * length;  //formula for area.
+    return area;
+}
+
+void rectangleFeatures(double width, double length, double area, double perimeter){ //Function that will be called
+
+    cout<<"\nYou created a rectangle with the following characteristics:"<<endl;
+    cout<<"width = "<<width<<endl;
+    cout<<"length = "<<length<<endl;
+    cout<<"perimeter = "<<perimeter<<endl;
+    cout<<"area = "<<area<<endl;
+}
+
+int main() {
+
+    // general Rectangles
+
+    double length = 0;
+    double width = 0;
+    double area = 0;
+    double perimeter = 0;
+
+    //Rectangle #1
+
+    cout << "\nEnter the length of the 1st rectangle: ";
+    cin >> length; //user input.
+    cout << "\nEnter the width of the 1st rectangle: ";
+    cin >> width;
+
+    area = areaRectangles(width, length); //call function to determine area and store in unique variables.
+    perimeter = perimeterRectangles(width, length); //call function to determine perimeter and store in unique variables.
+    rectangleFeatures(width, length, area, perimeter); //call function to print out the rectangles characteristics
+
+    // Rectangle #2
+
+    double length1 = 0;
+    double width1 = 0;
+    double area1 = 0;
+    double perimeter1 = 0;
+    cout << "\nEnter the length of the 2nd rectangle: ";
+    cin >> length1; //user input
+    cout << "\nEnter the width of the 2nd rectangle: ";
+    cin >> width1; // user input
+
+    area1 = areaRectangles(width1, length1);
+    perimeter1 = perimeterRectangles(width1, length1);
+    rectangleFeatures(width1, length1, area1, perimeter1); //will read in unique variables.
+
+    //Rectangle #3
+
+    cout << fixed << setprecision(4);
+
+    double length2 = 0;
+    double width2 = 0;
+    double area2 = 0;
+    double perimeter2 = 0;
+    cout << "\nEnter the length of the 3rd rectangle: ";
+    cin >> length2;
+    cout << "\nEnter the width of the 3rd rectangle: ";
+    cin >> width2;
+
+    area2 = areaRectangles(width2, length2);
+    perimeter2 = perimeterRectangles(width2, length2);
+    rectangleFeatures(width2, length2, area2, perimeter2); //will read in unique variables.
+
+    return 0;
+
+}
+
